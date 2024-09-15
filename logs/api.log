@@ -100,3 +100,121 @@
 2024-09-15 18:16:28 [INFO]: ::1 - - [15/Sep/2024:16:16:28 +0000] "GET /api/content HTTP/1.1" 200 37191 "-" "axios/1.7.7"
 2024-09-15 18:16:50 [INFO]: Retrieved all content successfully. Total items: 6
 2024-09-15 18:16:50 [INFO]: ::1 - - [15/Sep/2024:16:16:50 +0000] "GET /api/content HTTP/1.1" 200 37191 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+2024-09-15 18:19:46 [INFO]: Connected to MongoDB
+2024-09-15 18:19:46 [INFO]: Server is running on port 5000
+2024-09-15 18:21:20 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:21:20 [INFO]: ::1 - - [15/Sep/2024:16:21:20 +0000] "GET /api/content HTTP/1.1" 200 37191 "-" "axios/1.7.7"
+2024-09-15 18:21:21 [WARN]: Content not found with slug: 66e6eebbc980c3ba1d3d5d9f
+2024-09-15 18:21:21 [INFO]: ::1 - - [15/Sep/2024:16:21:21 +0000] "GET /api/content/slug/66e6eebbc980c3ba1d3d5d9f HTTP/1.1" 404 29 "-" "axios/1.7.7"
+2024-09-15 18:21:21 [WARN]: Content not found with slug: 66e6eebbc980c3ba1d3d5d9f
+2024-09-15 18:21:21 [INFO]: ::1 - - [15/Sep/2024:16:21:21 +0000] "GET /api/content/slug/66e6eebbc980c3ba1d3d5d9f HTTP/1.1" 404 29 "-" "axios/1.7.7"
+2024-09-15 18:22:17 [WARN]: Content not found with slug: 66e6eebbc980c3ba1d3d5d9f
+2024-09-15 18:22:17 [INFO]: ::1 - - [15/Sep/2024:16:22:17 +0000] "GET /api/content/slug/66e6eebbc980c3ba1d3d5d9f HTTP/1.1" 404 29 "-" "axios/1.7.7"
+2024-09-15 18:22:17 [WARN]: Content not found with slug: 66e6eebbc980c3ba1d3d5d9f
+2024-09-15 18:22:17 [INFO]: ::1 - - [15/Sep/2024:16:22:17 +0000] "GET /api/content/slug/66e6eebbc980c3ba1d3d5d9f HTTP/1.1" 404 29 "-" "axios/1.7.7"
+2024-09-15 18:22:17 [WARN]: Content not found with slug: 66e6eebbc980c3ba1d3d5d9f
+2024-09-15 18:22:17 [INFO]: ::1 - - [15/Sep/2024:16:22:17 +0000] "GET /api/content/slug/66e6eebbc980c3ba1d3d5d9f HTTP/1.1" 404 29 "-" "axios/1.7.7"
+2024-09-15 18:22:17 [WARN]: Content not found with slug: 66e6eebbc980c3ba1d3d5d9f
+2024-09-15 18:22:17 [INFO]: ::1 - - [15/Sep/2024:16:22:17 +0000] "GET /api/content/slug/66e6eebbc980c3ba1d3d5d9f HTTP/1.1" 404 29 "-" "axios/1.7.7"
+2024-09-15 18:22:18 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:22:18 [INFO]: ::1 - - [15/Sep/2024:16:22:18 +0000] "GET /api/content HTTP/1.1" 200 37191 "-" "axios/1.7.7"
+2024-09-15 18:22:27 [WARN]: Content not found with slug: 66e6eebbc980c3ba1d3d5d9f
+2024-09-15 18:22:27 [INFO]: ::1 - - [15/Sep/2024:16:22:27 +0000] "GET /api/content/slug/66e6eebbc980c3ba1d3d5d9f HTTP/1.1" 404 29 "-" "axios/1.7.7"
+2024-09-15 18:22:27 [WARN]: Content not found with slug: 66e6eebbc980c3ba1d3d5d9f
+2024-09-15 18:22:27 [INFO]: ::1 - - [15/Sep/2024:16:22:27 +0000] "GET /api/content/slug/66e6eebbc980c3ba1d3d5d9f HTTP/1.1" 404 29 "-" "axios/1.7.7"
+2024-09-15 18:22:27 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:22:27 [INFO]: ::1 - - [15/Sep/2024:16:22:27 +0000] "GET /api/content HTTP/1.1" 200 37191 "-" "axios/1.7.7"
+2024-09-15 18:25:40 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:25:40 [INFO]: ::1 - - [15/Sep/2024:16:25:40 +0000] "GET /api/content HTTP/1.1" 304 - "http://localhost:4000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+2024-09-15 18:25:40 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:25:40 [INFO]: ::1 - - [15/Sep/2024:16:25:40 +0000] "GET /api/content HTTP/1.1" 304 - "http://localhost:4000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+2024-09-15 18:25:43 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:25:43 [INFO]: ::1 - - [15/Sep/2024:16:25:43 +0000] "GET /api/content HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+2024-09-15 18:25:51 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:25:51 [INFO]: ::1 - - [15/Sep/2024:16:25:51 +0000] "GET /api/content HTTP/1.1" 200 37191 "-" "axios/1.7.7"
+2024-09-15 18:25:52 [INFO]: Retrieved content with slug: the-science-of-sleep-your-guide-to-understanding-and-optimizing-sleep-for-personal-development
+2024-09-15 18:25:52 [INFO]: ::1 - - [15/Sep/2024:16:25:52 +0000] "GET /api/content/slug/the-science-of-sleep-your-guide-to-understanding-and-optimizing-sleep-for-personal-development HTTP/1.1" 200 5932 "-" "axios/1.7.7"
+2024-09-15 18:25:52 [INFO]: Retrieved content with slug: the-science-of-sleep-your-guide-to-understanding-and-optimizing-sleep-for-personal-development
+2024-09-15 18:25:52 [INFO]: ::1 - - [15/Sep/2024:16:25:52 +0000] "GET /api/content/slug/the-science-of-sleep-your-guide-to-understanding-and-optimizing-sleep-for-personal-development HTTP/1.1" 200 5932 "-" "axios/1.7.7"
+2024-09-15 18:25:52 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:25:52 [INFO]: ::1 - - [15/Sep/2024:16:25:52 +0000] "GET /api/content HTTP/1.1" 200 37191 "-" "axios/1.7.7"
+2024-09-15 18:25:55 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:25:55 [INFO]: ::1 - - [15/Sep/2024:16:25:55 +0000] "GET /api/content HTTP/1.1" 304 - "http://localhost:4000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+2024-09-15 18:25:55 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:25:55 [INFO]: ::1 - - [15/Sep/2024:16:25:55 +0000] "GET /api/content HTTP/1.1" 304 - "http://localhost:4000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+2024-09-15 18:25:56 [INFO]: Retrieved content with slug: the-science-of-planning-and-goal-setting
+2024-09-15 18:25:56 [INFO]: ::1 - - [15/Sep/2024:16:25:56 +0000] "GET /api/content/slug/the-science-of-planning-and-goal-setting HTTP/1.1" 200 6383 "-" "axios/1.7.7"
+2024-09-15 18:25:56 [INFO]: Retrieved content with slug: the-science-of-planning-and-goal-setting
+2024-09-15 18:25:56 [INFO]: ::1 - - [15/Sep/2024:16:25:56 +0000] "GET /api/content/slug/the-science-of-planning-and-goal-setting HTTP/1.1" 200 6383 "-" "axios/1.7.7"
+2024-09-15 18:25:57 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:25:57 [INFO]: ::1 - - [15/Sep/2024:16:25:57 +0000] "GET /api/content HTTP/1.1" 200 37191 "-" "axios/1.7.7"
+2024-09-15 18:25:58 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:25:58 [INFO]: ::1 - - [15/Sep/2024:16:25:58 +0000] "GET /api/content HTTP/1.1" 304 - "http://localhost:4000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+2024-09-15 18:25:58 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:25:58 [INFO]: ::1 - - [15/Sep/2024:16:25:58 +0000] "GET /api/content HTTP/1.1" 304 - "http://localhost:4000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+2024-09-15 18:25:59 [INFO]: Retrieved content with slug: the-science-of-longevity-your-guide-to-a-longer-healthier-life
+2024-09-15 18:25:59 [INFO]: ::1 - - [15/Sep/2024:16:25:59 +0000] "GET /api/content/slug/the-science-of-longevity-your-guide-to-a-longer-healthier-life HTTP/1.1" 200 6045 "-" "axios/1.7.7"
+2024-09-15 18:25:59 [INFO]: Retrieved content with slug: the-science-of-longevity-your-guide-to-a-longer-healthier-life
+2024-09-15 18:25:59 [INFO]: ::1 - - [15/Sep/2024:16:25:59 +0000] "GET /api/content/slug/the-science-of-longevity-your-guide-to-a-longer-healthier-life HTTP/1.1" 200 6045 "-" "axios/1.7.7"
+2024-09-15 18:26:00 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:26:00 [INFO]: ::1 - - [15/Sep/2024:16:26:00 +0000] "GET /api/content HTTP/1.1" 200 37191 "-" "axios/1.7.7"
+2024-09-15 18:26:00 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:26:00 [INFO]: ::1 - - [15/Sep/2024:16:26:00 +0000] "GET /api/content HTTP/1.1" 304 - "http://localhost:4000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+2024-09-15 18:26:00 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:26:00 [INFO]: ::1 - - [15/Sep/2024:16:26:00 +0000] "GET /api/content HTTP/1.1" 304 - "http://localhost:4000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+2024-09-15 18:26:04 [WARN]: Content not found with slug: undefined
+2024-09-15 18:26:04 [INFO]: ::1 - - [15/Sep/2024:16:26:04 +0000] "GET /api/content/slug/undefined HTTP/1.1" 404 29 "-" "axios/1.7.7"
+2024-09-15 18:26:04 [WARN]: Content not found with slug: undefined
+2024-09-15 18:26:04 [INFO]: ::1 - - [15/Sep/2024:16:26:04 +0000] "GET /api/content/slug/undefined HTTP/1.1" 404 29 "-" "axios/1.7.7"
+2024-09-15 18:26:05 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:26:05 [INFO]: ::1 - - [15/Sep/2024:16:26:05 +0000] "GET /api/content HTTP/1.1" 200 37191 "-" "axios/1.7.7"
+2024-09-15 18:26:06 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:26:06 [INFO]: ::1 - - [15/Sep/2024:16:26:06 +0000] "GET /api/content HTTP/1.1" 304 - "http://localhost:4000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+2024-09-15 18:26:06 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:26:06 [INFO]: ::1 - - [15/Sep/2024:16:26:06 +0000] "GET /api/content HTTP/1.1" 304 - "http://localhost:4000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+2024-09-15 18:26:08 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:26:08 [INFO]: ::1 - - [15/Sep/2024:16:26:08 +0000] "GET /api/content HTTP/1.1" 304 - "http://localhost:4000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+2024-09-15 18:26:08 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:26:08 [INFO]: ::1 - - [15/Sep/2024:16:26:08 +0000] "GET /api/content HTTP/1.1" 304 - "http://localhost:4000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+2024-09-15 18:27:18 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:27:18 [INFO]: ::1 - - [15/Sep/2024:16:27:18 +0000] "GET /api/content HTTP/1.1" 304 - "http://localhost:4000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+2024-09-15 18:27:18 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:27:18 [INFO]: ::1 - - [15/Sep/2024:16:27:18 +0000] "GET /api/content HTTP/1.1" 304 - "http://localhost:4000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+2024-09-15 18:27:21 [INFO]: Retrieved content with slug: the-science-of-sleep-your-guide-to-understanding-and-optimizing-sleep-for-personal-development
+2024-09-15 18:27:21 [INFO]: ::1 - - [15/Sep/2024:16:27:21 +0000] "GET /api/content/slug/the-science-of-sleep-your-guide-to-understanding-and-optimizing-sleep-for-personal-development HTTP/1.1" 200 5932 "-" "axios/1.7.7"
+2024-09-15 18:27:21 [INFO]: Retrieved content with slug: the-science-of-sleep-your-guide-to-understanding-and-optimizing-sleep-for-personal-development
+2024-09-15 18:27:21 [INFO]: ::1 - - [15/Sep/2024:16:27:21 +0000] "GET /api/content/slug/the-science-of-sleep-your-guide-to-understanding-and-optimizing-sleep-for-personal-development HTTP/1.1" 200 5932 "-" "axios/1.7.7"
+2024-09-15 18:27:21 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:27:21 [INFO]: ::1 - - [15/Sep/2024:16:27:21 +0000] "GET /api/content HTTP/1.1" 200 37191 "-" "axios/1.7.7"
+2024-09-15 18:27:27 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:27:27 [INFO]: ::1 - - [15/Sep/2024:16:27:27 +0000] "GET /api/content HTTP/1.1" 304 - "http://localhost:4000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+2024-09-15 18:27:27 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:27:27 [INFO]: ::1 - - [15/Sep/2024:16:27:27 +0000] "GET /api/content HTTP/1.1" 304 - "http://localhost:4000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+2024-09-15 18:28:01 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:28:01 [INFO]: ::1 - - [15/Sep/2024:16:28:01 +0000] "GET /api/content HTTP/1.1" 304 - "http://localhost:4000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+2024-09-15 18:28:01 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:28:01 [INFO]: ::1 - - [15/Sep/2024:16:28:01 +0000] "GET /api/content HTTP/1.1" 304 - "http://localhost:4000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+2024-09-15 18:28:09 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:28:09 [INFO]: ::1 - - [15/Sep/2024:16:28:09 +0000] "GET /api/content HTTP/1.1" 304 - "http://localhost:4000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+2024-09-15 18:28:09 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:28:09 [INFO]: ::1 - - [15/Sep/2024:16:28:09 +0000] "GET /api/content HTTP/1.1" 304 - "http://localhost:4000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+2024-09-15 18:28:34 [INFO]: Retrieved content with slug: the-science-of-planning-and-goal-setting
+2024-09-15 18:28:34 [INFO]: ::1 - - [15/Sep/2024:16:28:34 +0000] "GET /api/content/slug/the-science-of-planning-and-goal-setting HTTP/1.1" 200 6383 "-" "axios/1.7.7"
+2024-09-15 18:28:34 [INFO]: Retrieved content with slug: the-science-of-planning-and-goal-setting
+2024-09-15 18:28:34 [INFO]: ::1 - - [15/Sep/2024:16:28:34 +0000] "GET /api/content/slug/the-science-of-planning-and-goal-setting HTTP/1.1" 200 6383 "-" "axios/1.7.7"
+2024-09-15 18:28:34 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:28:34 [INFO]: ::1 - - [15/Sep/2024:16:28:34 +0000] "GET /api/content HTTP/1.1" 200 37191 "-" "axios/1.7.7"
+2024-09-15 18:28:37 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:28:37 [INFO]: ::1 - - [15/Sep/2024:16:28:37 +0000] "GET /api/content HTTP/1.1" 304 - "http://localhost:4000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+2024-09-15 18:28:37 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:28:37 [INFO]: ::1 - - [15/Sep/2024:16:28:37 +0000] "GET /api/content HTTP/1.1" 304 - "http://localhost:4000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+2024-09-15 18:28:39 [INFO]: Retrieved content with slug: the-science-of-getting-things-done-unleashing-your-productivity-power
+2024-09-15 18:28:39 [INFO]: ::1 - - [15/Sep/2024:16:28:39 +0000] "GET /api/content/slug/the-science-of-getting-things-done-unleashing-your-productivity-power HTTP/1.1" 200 6145 "-" "axios/1.7.7"
+2024-09-15 18:28:39 [INFO]: Retrieved content with slug: the-science-of-getting-things-done-unleashing-your-productivity-power
+2024-09-15 18:28:39 [INFO]: ::1 - - [15/Sep/2024:16:28:39 +0000] "GET /api/content/slug/the-science-of-getting-things-done-unleashing-your-productivity-power HTTP/1.1" 200 6145 "-" "axios/1.7.7"
+2024-09-15 18:28:39 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:28:39 [INFO]: ::1 - - [15/Sep/2024:16:28:39 +0000] "GET /api/content HTTP/1.1" 200 37191 "-" "axios/1.7.7"
+2024-09-15 18:28:44 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:28:44 [INFO]: ::1 - - [15/Sep/2024:16:28:44 +0000] "GET /api/content HTTP/1.1" 304 - "http://localhost:4000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+2024-09-15 18:28:44 [INFO]: Retrieved all content successfully. Total items: 6
+2024-09-15 18:28:44 [INFO]: ::1 - - [15/Sep/2024:16:28:44 +0000] "GET /api/content HTTP/1.1" 304 - "http://localhost:4000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
