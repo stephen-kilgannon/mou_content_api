@@ -31,6 +31,22 @@ export const getAllContent = async (req: Request, res: Response) => {
   }
 };
 
+export const getContentBySlug = async (req: Request, res: Response) => {
+  try {
+    const content = await Content.findOne({ slug: req.params.slug });
+    if (!content) {
+      logger.warn(`Content not found with slug: ${req.params.slug}`);
+      return res.status(404).json({ error: 'Content not found' });
+    }
+    logger.info(`Retrieved content with slug: ${req.params.slug}`);
+    res.status(200).json(content);
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    logger.error(`Failed to retrieve content with slug: ${req.params.slug}. Error: ${errorMessage}`);
+    res.status(500).json({ error: 'Failed to retrieve content' });
+  }
+};
+
 export const getContentById = async (req: Request, res: Response) => {
   try {
     const content = await Content.findById(req.params.id);
