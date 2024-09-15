@@ -1,12 +1,16 @@
-import mongoose, { Document, Schema } from 'mongoose';
+// src/models/content.model.ts
 
-export interface IContent extends Document {
+import mongoose, { Document, Schema } from 'mongoose';
+import slugify from 'slugify';
+
+interface IContent extends Document {
   title: string;
+  content: string;
   meta: {
     description: string;
     keywords: string;
   };
-  content: string;
+  slug: string;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -14,13 +18,24 @@ export interface IContent extends Document {
 const ContentSchema: Schema = new Schema(
   {
     title: { type: String, required: true },
-    meta: {
-      description: { type: String, required: false },
-      keywords: { type: String, required: false },
-    },
     content: { type: String, required: true },
+    meta: {
+      description: { type: String, required: true },
+      keywords: { type: String, required: true },
+    },
+    slug: { type: String},
   },
-  { timestamps: true }
+  {
+    timestamps: true,
+  }
 );
+
+// Middleware to generate slug from title if slug is not provided
+ContentSchema.pre<IContent>('save', function (next) {
+  if (!this.slug) {
+    this.slug = slugify(this.title, { lower: true, strict: true });
+  }
+  next();
+});
 
 export default mongoose.model<IContent>('Content', ContentSchema);

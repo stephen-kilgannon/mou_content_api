@@ -1,0 +1,54 @@
+2024-09-15 16:26:24 [INFO]: Connected to MongoDB
+2024-09-15 16:26:24 [INFO]: Server is running on port 5000
+2024-09-15 16:27:07 [INFO]: ::1 - - [15/Sep/2024:14:27:07 +0000] "POST /api/content HTTP/1.1" 201 6073 "-" "python-requests/2.32.3"
+2024-09-15 16:27:07 [INFO]: ::1 - - [15/Sep/2024:14:27:07 +0000] "POST /api/content HTTP/1.1" 201 6606 "-" "python-requests/2.32.3"
+2024-09-15 16:27:20 [INFO]: ::1 - - [15/Sep/2024:14:27:20 +0000] "GET /api/content HTTP/1.1" 200 12682 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+2024-09-15 16:54:09 [INFO]: ::1 - - [15/Sep/2024:14:54:09 +0000] "GET /api/content/sample-content-id HTTP/1.1" 500 38 "-" "axios/1.7.7"
+2024-09-15 16:54:09 [INFO]: ::1 - - [15/Sep/2024:14:54:09 +0000] "GET /api/content/sample-content-id HTTP/1.1" 500 38 "-" "axios/1.7.7"
+2024-09-15 16:54:09 [INFO]: ::1 - - [15/Sep/2024:14:54:09 +0000] "GET /api/content/sample-content-id HTTP/1.1" 500 38 "-" "axios/1.7.7"
+2024-09-15 16:54:57 [INFO]: ::1 - - [15/Sep/2024:14:54:57 +0000] "GET /api/content/66e6eebbc980c3ba1d3d5d9f HTTP/1.1" 200 6606 "-" "axios/1.7.7"
+2024-09-15 16:55:45 [INFO]: ::1 - - [15/Sep/2024:14:55:45 +0000] "GET /api/content/66e6eebbc980c3ba1d3d5d9f HTTP/1.1" 200 6606 "-" "axios/1.7.7"
+2024-09-15 16:55:58 [INFO]: ::1 - - [15/Sep/2024:14:55:58 +0000] "GET /api/content/66e6eebbc980c3ba1d3d5d9f HTTP/1.1" 200 6606 "-" "axios/1.7.7"
+2024-09-15 16:56:49 [INFO]: ::1 - - [15/Sep/2024:14:56:49 +0000] "GET /api/content/sample-content-id HTTP/1.1" 500 38 "-" "axios/1.7.7"
+2024-09-15 16:56:49 [INFO]: ::1 - - [15/Sep/2024:14:56:49 +0000] "GET /api/content/sample-content-id HTTP/1.1" 500 38 "-" "axios/1.7.7"
+2024-09-15 17:00:28 [INFO]: ::1 - - [15/Sep/2024:15:00:28 +0000] "GET /api/content/sample-content-id HTTP/1.1" 500 38 "-" "axios/1.7.7"
+2024-09-15 17:00:50 [INFO]: ::1 - - [15/Sep/2024:15:00:50 +0000] "GET /api/content/66e6eebbc980c3ba1d3d5d9f HTTP/1.1" 200 6606 "-" "axios/1.7.7"
+2024-09-15 17:05:11 [INFO]: ::1 - - [15/Sep/2024:15:05:11 +0000] "GET /api/content/66e6eebbc980c3ba1d3d5d9f HTTP/1.1" 200 6606 "-" "axios/1.7.7"
+2024-09-15 17:05:19 [INFO]: ::1 - - [15/Sep/2024:15:05:19 +0000] "GET /api/content/66e6eebbc980c3ba1d3d5d9f HTTP/1.1" 200 6606 "-" "axios/1.7.7"
+2024-09-15 17:05:24 [INFO]: ::1 - - [15/Sep/2024:15:05:24 +0000] "GET /api/content/66e6eebbc980c3ba1d3d5d9f HTTP/1.1" 200 6606 "-" "axios/1.7.7"
+2024-09-15 17:07:40 [INFO]: ::1 - - [15/Sep/2024:15:07:40 +0000] "GET /api/content/66e6eebbc980c3ba1d3d5d9f HTTP/1.1" 200 6606 "-" "axios/1.7.7"
+2024-09-15 17:08:30 [INFO]: ::1 - - [15/Sep/2024:15:08:30 +0000] "GET /api/content/66e6eebbc980c3ba1d3d5d9f HTTP/1.1" 200 6606 "-" "axios/1.7.7"
+2024-09-15 17:09:26 [INFO]: ::1 - - [15/Sep/2024:15:09:26 +0000] "GET /api/content/66e6eebbc980c3ba1d3d5d9f HTTP/1.1" 200 6606 "-" "axios/1.7.7"
+2024-09-15 17:09:26 [INFO]: ::1 - - [15/Sep/2024:15:09:26 +0000] "GET /api/content/66e6eebbc980c3ba1d3d5d9f HTTP/1.1" 200 6606 "-" "axios/1.7.7"
+2024-09-15 17:09:27 [INFO]: ::1 - - [15/Sep/2024:15:09:27 +0000] "GET /api/content HTTP/1.1" 200 12682 "-" "axios/1.7.7"
+2024-09-15 17:21:50 [INFO]: ::1 - - [15/Sep/2024:15:21:50 +0000] "GET /api/content/66e6eebbc980c3ba1d3d5d9f HTTP/1.1" 200 6606 "-" "axios/1.7.7"
+2024-09-15 17:21:50 [INFO]: ::1 - - [15/Sep/2024:15:21:50 +0000] "GET /api/content/66e6eebbc980c3ba1d3d5d9f HTTP/1.1" 200 6606 "-" "axios/1.7.7"
+2024-09-15 17:21:50 [INFO]: ::1 - - [15/Sep/2024:15:21:50 +0000] "GET /api/content HTTP/1.1" 200 12682 "-" "axios/1.7.7"
+2024-09-15 17:58:45 [INFO]: Connected to MongoDB
+2024-09-15 17:58:45 [INFO]: Server is running on port 5000
+2024-09-15 17:58:58 [INFO]: ::1 - - [15/Sep/2024:15:58:58 +0000] "POST /api/content HTTP/1.1" 500 36 "-" "python-requests/2.32.3"
+2024-09-15 17:58:58 [INFO]: ::1 - - [15/Sep/2024:15:58:58 +0000] "POST /api/content HTTP/1.1" 500 36 "-" "python-requests/2.32.3"
+2024-09-15 17:58:58 [INFO]: ::1 - - [15/Sep/2024:15:58:58 +0000] "POST /api/content HTTP/1.1" 500 36 "-" "python-requests/2.32.3"
+2024-09-15 17:58:58 [INFO]: ::1 - - [15/Sep/2024:15:58:58 +0000] "POST /api/content HTTP/1.1" 500 36 "-" "python-requests/2.32.3"
+2024-09-15 17:59:25 [INFO]: ::1 - - [15/Sep/2024:15:59:25 +0000] "GET /api/content HTTP/1.1" 200 12716 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+2024-09-15 18:00:14 [INFO]: ::1 - - [15/Sep/2024:16:00:14 +0000] "GET /api/content HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+2024-09-15 18:05:29 [INFO]: Connected to MongoDB
+2024-09-15 18:05:29 [INFO]: Server is running on port 5000
+2024-09-15 18:05:37 [ERROR]: Failed to create content: Content validation failed: slug: Path `slug` is required.
+2024-09-15 18:05:37 [INFO]: ::1 - - [15/Sep/2024:16:05:37 +0000] "POST /api/content HTTP/1.1" 500 36 "-" "python-requests/2.32.3"
+2024-09-15 18:05:37 [ERROR]: Failed to create content: Content validation failed: slug: Path `slug` is required.
+2024-09-15 18:05:37 [INFO]: ::1 - - [15/Sep/2024:16:05:37 +0000] "POST /api/content HTTP/1.1" 500 36 "-" "python-requests/2.32.3"
+2024-09-15 18:05:37 [ERROR]: Failed to create content: Content validation failed: slug: Path `slug` is required.
+2024-09-15 18:05:37 [INFO]: ::1 - - [15/Sep/2024:16:05:37 +0000] "POST /api/content HTTP/1.1" 500 36 "-" "python-requests/2.32.3"
+2024-09-15 18:05:37 [ERROR]: Failed to create content: Content validation failed: slug: Path `slug` is required.
+2024-09-15 18:05:37 [INFO]: ::1 - - [15/Sep/2024:16:05:37 +0000] "POST /api/content HTTP/1.1" 500 36 "-" "python-requests/2.32.3"
+2024-09-15 18:08:34 [INFO]: Connected to MongoDB
+2024-09-15 18:08:34 [INFO]: Server is running on port 5000
+2024-09-15 18:08:37 [ERROR]: Failed to create content: Content validation failed: slug: Path `slug` is required.
+2024-09-15 18:08:37 [INFO]: ::1 - - [15/Sep/2024:16:08:37 +0000] "POST /api/content HTTP/1.1" 500 36 "-" "python-requests/2.32.3"
+2024-09-15 18:08:37 [ERROR]: Failed to create content: Content validation failed: slug: Path `slug` is required.
+2024-09-15 18:08:37 [INFO]: ::1 - - [15/Sep/2024:16:08:37 +0000] "POST /api/content HTTP/1.1" 500 36 "-" "python-requests/2.32.3"
+2024-09-15 18:08:37 [ERROR]: Failed to create content: Content validation failed: slug: Path `slug` is required.
+2024-09-15 18:08:37 [INFO]: ::1 - - [15/Sep/2024:16:08:37 +0000] "POST /api/content HTTP/1.1" 500 36 "-" "python-requests/2.32.3"
+2024-09-15 18:08:37 [ERROR]: Failed to create content: Content validation failed: slug: Path `slug` is required.
+2024-09-15 18:08:37 [INFO]: ::1 - - [15/Sep/2024:16:08:37 +0000] "POST /api/content HTTP/1.1" 500 36 "-" "python-requests/2.32.3"
