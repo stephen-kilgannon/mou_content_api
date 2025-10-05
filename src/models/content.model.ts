@@ -8,7 +8,7 @@ interface IContent extends Document {
   content: string;
   meta: {
     description: string;
-    keywords: string;
+    keywords: string[];
   };
   slug: string;
   createdAt: Date;
@@ -21,9 +21,9 @@ const ContentSchema: Schema = new Schema(
     content: { type: String, required: true },
     meta: {
       description: { type: String, required: true },
-      keywords: { type: String, required: true },
+      keywords: { type: [String], required: true },
     },
-    slug: { type: String},
+    slug: { type: String },
   },
   {
     timestamps: true,

@@ -14,7 +14,10 @@ const app = express();
 
 // Middleware
 app.use(cors());
-app.use(express.json()); // Parse JSON bodies
+// Increase the limit for JSON payloads
+app.use(express.json({ limit: '50mb' }));
+// Increase the limit for URL-encoded payloads
+app.use(express.urlencoded({ limit: '50mb', extended: true }));
 
 // Morgan middleware for logging HTTP requests
 app.use(morgan('combined', { stream: { write: (message: string) => logger.info(message.trim()) } }));
