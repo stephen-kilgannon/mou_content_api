@@ -3132,3 +3132,29 @@
 2025-10-05 14:29:42 [INFO]: ::1 - - [05/Oct/2025:12:29:42 +0000] "GET /api/content HTTP/1.1" 200 2 "http://localhost:4000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
 2025-10-05 14:29:42 [INFO]: Retrieved all content successfully. Total items: 0
 2025-10-05 14:29:42 [INFO]: ::1 - - [05/Oct/2025:12:29:42 +0000] "GET /api/content HTTP/1.1" 304 - "http://localhost:4000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+2025-10-05 14:31:35 [INFO]: Connected to MongoDB
+2025-10-05 14:31:35 [INFO]: Server is running on port 5000
+2025-10-05 14:31:35 [INFO]: Content created successfully with ID: 68e26527c83494057a5afc6c
+2025-10-05 14:31:35 [INFO]: ::1 - - [05/Oct/2025:12:31:35 +0000] "POST /api/content HTTP/1.1" 201 136204 "-" "python-requests/2.32.3"
+2025-10-05 14:31:35 [INFO]: Content created successfully with ID: 68e26527c83494057a5afc6e
+2025-10-05 14:31:35 [INFO]: ::1 - - [05/Oct/2025:12:31:35 +0000] "POST /api/content HTTP/1.1" 201 112041 "-" "python-requests/2.32.3"
+2025-10-05 14:31:35 [INFO]: Content created successfully with ID: 68e26527c83494057a5afc70
+2025-10-05 14:31:35 [INFO]: ::1 - - [05/Oct/2025:12:31:35 +0000] "POST /api/content HTTP/1.1" 201 107813 "-" "python-requests/2.32.3"
+2025-10-05 14:31:35 [INFO]: Content created successfully with ID: 68e26527c83494057a5afc72
+2025-10-05 14:31:35 [INFO]: ::1 - - [05/Oct/2025:12:31:35 +0000] "POST /api/content HTTP/1.1" 201 81157 "-" "python-requests/2.32.3"
+2025-10-05 14:31:39 [INFO]: Retrieved all content successfully. Total items: 4
+2025-10-05 14:31:39 [INFO]: ::1 - - [05/Oct/2025:12:31:39 +0000] "GET /api/content HTTP/1.1" 200 437220 "http://localhost:4000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+2025-10-05 14:31:39 [INFO]: Retrieved all content successfully. Total items: 4
+2025-10-05 14:31:39 [INFO]: ::1 - - [05/Oct/2025:12:31:39 +0000] "GET /api/content HTTP/1.1" 304 - "http://localhost:4000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+2025-10-05 14:31:46 [INFO]: Retrieved content with slug: the-graham-fi-blueprint-achieving-financial-independence-through-intelligent-investing
+2025-10-05 14:31:46 [INFO]: ::1 - - [05/Oct/2025:12:31:46 +0000] "GET /api/content/slug/the-graham-fi-blueprint-achieving-financial-independence-through-intelligent-investing HTTP/1.1" 200 107813 "http://localhost:4000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+2025-10-05 14:31:46 [INFO]: Retrieved content with slug: the-graham-fi-blueprint-achieving-financial-independence-through-intelligent-investing
+2025-10-05 14:31:46 [INFO]: ::1 - - [05/Oct/2025:12:31:46 +0000] "GET /api/content/slug/the-graham-fi-blueprint-achieving-financial-independence-through-intelligent-investing HTTP/1.1" 304 - "http://localhost:4000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+2025-10-05 14:31:46 [INFO]: Retrieved content with slug: the-graham-fi-blueprint-achieving-financial-independence-through-intelligent-investing
+2025-10-05 14:31:46 [INFO]: ::1 - - [05/Oct/2025:12:31:46 +0000] "GET /api/content/slug/the-graham-fi-blueprint-achieving-financial-independence-through-intelligent-investing HTTP/1.1" 304 - "http://localhost:4000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+2025-10-05 14:42:09 [INFO]: Retrieved all content successfully. Total items: 4
+2025-10-05 14:42:09 [INFO]: ::1 - - [05/Oct/2025:12:42:09 +0000] "GET /api/content HTTP/1.1" 304 - "http://localhost:4000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+2025-10-05 14:42:09 [INFO]: Retrieved all content successfully. Total items: 4
+2025-10-05 14:42:09 [INFO]: ::1 - - [05/Oct/2025:12:42:09 +0000] "GET /api/content HTTP/1.1" 304 - "http://localhost:4000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+2025-10-05 14:53:10 [INFO]: All content has been cleaned. Deleted 4 items.
+2025-10-05 14:53:10 [INFO]: ::ffff:127.0.0.1 - devuser [05/Oct/2025:12:53:10 +0000] "DELETE /api/content HTTP/1.1" 200 73 "-" "vscode-restclient"

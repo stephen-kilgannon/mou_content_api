@@ -9,6 +9,10 @@ interface IContent extends Document {
   meta: {
     description: string;
     keywords: string[];
+    author?: string;
+    date?: Date;
+    tags?: string[];
+    imageUrl?: string;
   };
   slug: string;
   createdAt: Date;
@@ -22,6 +26,10 @@ const ContentSchema: Schema = new Schema(
     meta: {
       description: { type: String, required: true },
       keywords: { type: [String], required: true },
+      author: { type: String },
+      date: { type: Date },
+      tags: { type: [String] },
+      imageUrl: { type: String },
     },
     slug: { type: String },
   },
