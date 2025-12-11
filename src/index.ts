@@ -6,6 +6,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import morgan from 'morgan';
 import contentRoutes from './routes/content.routes';
+import objectRoutes from './routes/object.routes';
 import logger from './utils/logger';
 
 dotenv.config();
@@ -24,6 +25,7 @@ app.use(morgan('combined', { stream: { write: (message: string) => logger.info(m
 
 // Routes
 app.use('/api/content', contentRoutes);
+app.use('/api/objects', objectRoutes);
 
 // Database Connection
 const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/contentdb';
