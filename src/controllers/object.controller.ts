@@ -25,20 +25,23 @@ export const createObject = async (req: Request, res: Response) => {
             });
         }
 
-        const objectData = new ObjectModel({
+        // Ensure metadata and items are proper objects/arrays
+        const cleanMetadata = typeof metadata === 'object' && metadata !== null ? metadata : {};
+        const cleanItems = Array.isArray(items) ? items : [];
+
+        const objectData = await ObjectModel.create({
             title,
             description,
-            userId,
-            dueDate: dueDate ? new Date(dueDate) : null,
+            user_id: userId,
+            due_date: dueDate ? new Date(dueDate) : null,
             type,
-            metadata,
-            items,
+            metadata: cleanMetadata,
+            items: cleanItems,
             upvotes,
             downvotes
         });
 
-        await objectData.save();
-        logger.info(`Object created successfully with ID: ${objectData._id}`);
+        logger.info(`Object created successfully with ID: ${objectData.id}`);
         res.status(201).json(objectData);
     } catch (error) {
         const errorMessage = error instanceof Error ? error.message : 'Unknown error';
@@ -53,23 +56,18 @@ export const getAllObjects = async (req: Request, res: Response) => {
 
         const filter: any = {};
         if (type) filter.type = type;
-        if (userId) filter.userId = userId;
+        if (userId) filter.user_id = userId;
 
-        const objects = await ObjectModel.find(filter)
-            .sort({ createdAt: -1 })
-            .limit(Number(limit))
-            .skip(Number(offset));
+        const result = await ObjectModel.findAll(filter, Number(limit), Number(offset));
 
-        const total = await ObjectModel.countDocuments(filter);
-
-        logger.info(`Retrieved objects successfully. Total items: ${objects.length}`);
+        logger.info(`Retrieved objects successfully. Total items: ${result.objects.length}`);
         res.status(200).json({
-            objects,
+            objects: result.objects,
             pagination: {
-                total,
+                total: result.total,
                 limit: Number(limit),
                 offset: Number(offset),
-                hasMore: total > Number(offset) + Number(limit)
+                hasMore: result.total > Number(offset) + Number(limit)
             }
         });
     } catch (error) {
@@ -81,7 +79,7 @@ export const getAllObjects = async (req: Request, res: Response) => {
 
 export const getObjectById = async (req: Request, res: Response) => {
     try {
-        const object = await ObjectModel.findById(req.params.id);
+        const object = await ObjectModel.findById(parseInt(req.params.id));
         if (!object) {
             logger.warn(`Object not found with ID: ${req.params.id}`);
             return res.status(404).json({ error: 'Object not found' });
@@ -101,15 +99,22 @@ export const updateObject = async (req: Request, res: Response) => {
         const updates = req.body;
 
         // Remove fields that shouldn't be updated directly
-        delete updates._id;
-        delete updates.createdAt;
-        delete updates.updatedAt;
+        delete updates.id;
+        delete updates.created_at;
+        delete updates.updated_at;
 
-        const object = await ObjectModel.findByIdAndUpdate(
-            id,
-            updates,
-            { new: true, runValidators: true }
-        );
+        // Convert userId to user_id for database consistency
+        if (updates.userId !== undefined) {
+            updates.user_id = updates.userId;
+            delete updates.userId;
+        }
+
+        if (updates.dueDate !== undefined) {
+            updates.due_date = updates.dueDate;
+            delete updates.dueDate;
+        }
+
+        const object = await ObjectModel.update(parseInt(id), updates);
 
         if (!object) {
             logger.warn(`Object not found with ID: ${id}`);
@@ -127,8 +132,8 @@ export const updateObject = async (req: Request, res: Response) => {
 
 export const deleteObject = async (req: Request, res: Response) => {
     try {
-        const object = await ObjectModel.findByIdAndDelete(req.params.id);
-        if (!object) {
+        const deleted = await ObjectModel.delete(parseInt(req.params.id));
+        if (!deleted) {
             logger.warn(`Object not found with ID: ${req.params.id}`);
             return res.status(404).json({ error: 'Object not found' });
         }
@@ -150,13 +155,7 @@ export const updateObjectVotes = async (req: Request, res: Response) => {
             return res.status(400).json({ error: 'Vote type must be "upvote" or "downvote"' });
         }
 
-        const updateField = type === 'upvote' ? { $inc: { upvotes: 1 } } : { $inc: { downvotes: 1 } };
-
-        const object = await ObjectModel.findByIdAndUpdate(
-            id,
-            updateField,
-            { new: true }
-        );
+        const object = await ObjectModel.updateVotes(parseInt(id), type);
 
         if (!object) {
             logger.warn(`Object not found with ID: ${id}`);
@@ -181,7 +180,7 @@ export const updateObjectItem = async (req: Request, res: Response) => {
         const { id, itemIndex } = req.params;
         const updates = req.body;
 
-        const object = await ObjectModel.findById(id);
+        const object = await ObjectModel.findById(parseInt(id));
         if (!object) {
             logger.warn(`Object not found with ID: ${id}`);
             return res.status(404).json({ error: 'Object not found' });
@@ -194,12 +193,14 @@ export const updateObjectItem = async (req: Request, res: Response) => {
 
         // Update the specific item
         Object.assign(object.items[index], updates);
-        await object.save();
+
+        // Update the entire object with the modified items array
+        const updatedObject = await ObjectModel.update(parseInt(id), { items: object.items });
 
         logger.info(`Updated item ${index} for object with ID: ${id}`);
         res.json({
             message: 'Item updated successfully',
-            item: object.items[index]
+            item: updatedObject?.items[index]
         });
     } catch (error) {
         const errorMessage = error instanceof Error ? error.message : 'Unknown error';
@@ -210,11 +211,11 @@ export const updateObjectItem = async (req: Request, res: Response) => {
 
 export const cleanObjects = async (req: Request, res: Response) => {
     try {
-        const result = await ObjectModel.deleteMany({});
-        logger.info(`Cleaned all objects. Deleted count: ${result.deletedCount}`);
+        const deletedCount = await ObjectModel.deleteAll();
+        logger.info(`Cleaned all objects. Deleted count: ${deletedCount}`);
         res.status(200).json({
             message: 'All objects cleaned successfully',
-            deletedCount: result.deletedCount
+            deletedCount: deletedCount
         });
     } catch (error) {
         const errorMessage = error instanceof Error ? error.message : 'Unknown error';
