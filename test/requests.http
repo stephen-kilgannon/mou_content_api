@@ -43,6 +43,7 @@ Authorization: Basic ZGV2dXNlcjpkZXZwYXNz=
 
 ###
 
+ty##`    utykuk
 ### **DELETE** all content (clean):
 DELETE http://localhost:5000/api/content HTTP/1.1
 Authorization: Basic ZGV2dXNlcjpkZXZwYXNz=

@@ -1,0 +1,36 @@
+version: '3'
+services:
+  api:
+    container_name: content-api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+    depends_on:
+      - db
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  db:
+    container_name: content-db
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_DB=contentdb
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=yourpassword
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
