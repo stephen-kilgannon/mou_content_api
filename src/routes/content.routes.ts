@@ -7,18 +7,20 @@ import {
   deleteContent,
   cleanContent
 } from '../controllers/content.controller';
+import { validate } from '../middleware/validation';
+import {
+  createContentValidation,
+  getContentByIdValidation,
+  getContentBySlugValidation
+} from '../middleware/validation';
 
 const router = express.Router();
 
-router.post('/', createContent);
+router.post('/', validate(createContentValidation), createContent);
 router.get('/', getAllContent);
-router.get('/:id', getContentById);
-router.get('/slug/:slug', getContentBySlug);
-router.delete('/:id', deleteContent)
-router.delete('/', cleanContent)
-
-
-
-
+router.get('/:id', validate(getContentByIdValidation), getContentById);
+router.get('/slug/:slug', validate(getContentBySlugValidation), getContentBySlug);
+router.delete('/:id', validate(getContentByIdValidation), deleteContent);
+router.delete('/', cleanContent);
 
 export default router;
