@@ -1,0 +1,176 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+env:
+  APP_NAME: mou-service-content-api
+  DEPLOY_PATH: /var/www/mou-service-content-api
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:15-alpine
+        env:
+          POSTGRES_DB: contentdb_test
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: testpassword
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: TypeScript check
+        run: npm run typecheck
+
+      - name: Run unit tests
+        run: npm run test:unit
+        env:
+          NODE_ENV: test
+
+      - name: Run E2E tests
+        run: npm run test:e2e
+        env:
+          NODE_ENV: test
+          DB_HOST: localhost
+          DB_PORT: 5432
+          DB_NAME: contentdb_test
+          DB_USER: postgres
+          DB_PASSWORD: testpassword
+
+      - name: Generate coverage report
+        run: npm run test:coverage
+        env:
+          NODE_ENV: test
+          DB_HOST: localhost
+          DB_PORT: 5432
+          DB_NAME: contentdb_test
+          DB_USER: postgres
+          DB_PASSWORD: testpassword
+
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage/
+          retention-days: 7
+
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build TypeScript
+        run: npm run build
+
+      - name: Create deployment package
+        run: |
+          mkdir -p deploy
+          cp -r dist deploy/
+          cp package*.json deploy/
+          cp ecosystem.config.js deploy/
+          tar -czf deploy.tar.gz -C deploy .
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: build
+          path: deploy.tar.gz
+          retention-days: 1
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: build
+
+      - name: Deploy to server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          source: deploy.tar.gz
+          target: /tmp
+
+      - name: Execute deployment
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            set -e
+            
+            # Setup directories
+            DEPLOY_PATH=${{ env.DEPLOY_PATH }}
+            TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+            RELEASE_PATH="${DEPLOY_PATH}/releases/${TIMESTAMP}"
+            
+            mkdir -p "${RELEASE_PATH}"
+            mkdir -p "${DEPLOY_PATH}/shared/logs"
+            
+            # Extract release
+            tar -xzf /tmp/deploy.tar.gz -C "${RELEASE_PATH}"
+            rm /tmp/deploy.tar.gz
+            
+            # Install production dependencies
+            cd "${RELEASE_PATH}"
+            npm ci --only=production
+            
+            # Link shared resources
+            ln -sfn "${DEPLOY_PATH}/shared/.env" "${RELEASE_PATH}/.env"
+            
+            # Run database migrations (if applicable)
+            # npm run db:migrate
+            
+            # Update current symlink
+            ln -sfn "${RELEASE_PATH}" "${DEPLOY_PATH}/current"
+            
+            # Reload application
+            cd "${DEPLOY_PATH}/current"
+            pm2 reload ecosystem.config.js --update-env || pm2 start ecosystem.config.js
+            pm2 save
+            
+            # Verify health
+            sleep 5
+            curl -sf http://localhost:5000/health || exit 1
+            
+            # Cleanup old releases (keep last 3)
+            cd "${DEPLOY_PATH}/releases"
+            ls -t | tail -n +4 | xargs -r rm -rf
+            
+            echo "✅ Deployment complete: ${TIMESTAMP}"
